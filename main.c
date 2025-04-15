@@ -99,16 +99,21 @@ int main()
 
 void Ex1()
 {
-	int n1 = 100, n2 = 151; //just an example;
-	int p_size = n2 - n1 + 1;
 
-	Number* result = primeSums(n1, n2, &p_size); //since we want to free it we create an array we can free in this function
+	int n1, n2;
+	printf("Please enter a minimum number and a maximum number:\n");
+	printf("n1 =");
+	scanf_s("%d", &n1);
+	printf("\nn2 = ");
+	scanf_s("%d", &n2);
+	int p_size = n2 - n1;
+
+	Number* result = primeSums(n1, n2, &p_size);
+	printf("There are %d numbers whice their digit's sum is a prime number! \n", p_size);
 	printArray(result, p_size);
 
-	free(result);
-	return 0;
-}
 
+}
 void Ex2()
 {
 	/* Called functions:
